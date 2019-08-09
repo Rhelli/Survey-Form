@@ -9,20 +9,33 @@
             font-size: 16px;
             text-align: center;
         }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
 
         /* Navbar Container */
         .navbar {
-            overflow: hidden;
+            display: flex;
+            position: sticky;
+            /* overflow: hidden; */
             font-family: sans-serif;
             background-color: "";
-            /* justify-content: space-evenly;
-            align-items: flex-start;
-            align-content: flex-start; */
+            justify-content: space-around;
+            align-items: center;
+            align-content: flex-start;
         }
+                /* Navbar Logo */
+                .nav-logo {
+                    width: auto;
+                    height: 50px;
+                }
+                
                 /* Navbar Links */
                 .navbar a {
                     /* float: center; */
-                    font-size: 1em;
+                    font-size: 1.3em;
                     color: #f7be16;
                     text-align: center;
                     padding: 14px 16px;
@@ -37,7 +50,7 @@
 
                 /* Dropdown Button */
                 .dropdown .dropbutton {
-                    font-size: 1em;
+                    font-size: 1.3em;
                     border: none;
                     outline: none;
                     color: #f7be16;
@@ -88,10 +101,16 @@
 <body>
     <header>
         <nav class="navbar">
-        <a href="#Home"><img src="/Arrrlogo.png"></a>
+        <a href="#Home"><img class="nav-logo" src="/Arrrlogo.png"></a>
         <a href="#News">News</a>
         <a href="#Events">Events</a>
-        <a href="#Hearties">Hearties</a>
+        <div class="dropdown">
+        <button class="dropbutton">Hearties</button>
+        <div class="dropdown-content">
+            <a href="#Forums">Forum</a>
+            <a href="#MateyFinder">Matey Finder</a>
+        </div>
+        </div>
         <div class="dropdown">
         <button class="dropbutton">Services</button>
         <div class="dropdown-content">
