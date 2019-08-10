@@ -94,7 +94,18 @@
                 .dropdown:hover .dropdown-content {
                     display: block;
                 }
+        
 
+        /* Form Outline */
+        .form-outline {
+            background-color: #216583;
+            margin: 0 auto;
+            border-radius: 4px;
+            width: 80%;
+            max-width: 1600px;
+            padding: 10px;
+            padding-top: 20px;
+        }
 
         </style>
     </head>
@@ -124,5 +135,25 @@
         <a href="#Careers">Careers</a>
     </nav>
     </header>
+    <main>
+        <h1>Scurvy Form</h1>
+        <div class="form-outline">
+            <p>Avast ye, some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
+                Fill out ye form 'n hand o'er ye information so that we may defeat this bilge-sucklin' scourge that be 
+                threatenin' t' sink every last one o' us ole salt. Do nah be a scurvy dog, lest ye walk th' plank t' become
+                taint'd shark bait!</p>
+        </div>
+        <div>
+            <form id="survey-form">
+                <div>
+                    <div>
+                        <label id="name-label" for="name">*Yer Name</label>
+                    </div>
+                    <div>
+                        <input id="name" autofocus type="text" name="name" placeholder="Scribe Yer Name" required>
+                    </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
