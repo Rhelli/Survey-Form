@@ -145,13 +145,91 @@
         </div>
         <div>
             <form id="survey-form">
-                <div>
+                <div> 
                     <div>
                         <label id="name-label" for="name">*Yer Name</label>
                     </div>
                     <div>
                         <input id="name" autofocus type="text" name="name" placeholder="Scribe Yer Name" required>
                     </div>
+                </div>
+                <div>
+                    <div>
+                        <label id="email-label" for="email">*Yer Email</label>
+                    </div>
+                    <div>
+                        <input id="email" autofocus type="text" name="email" placeholder="Scribe Yer Email" required>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label id="years-label" for="years">*Yer Years </label>
+                    </div>
+                    <div>
+                        <input id="years" autofocus type="text" name="years" min="1" max ="115" placeholder="Scribe Yer Years" required>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="experience">*Wha' Be Yer Level O' Experience?</label>
+                    </div>
+                    <div>
+                        <select id="dropdown" name="experience">
+                            <option disabled value>Pick Yer Experience Matey</option>
+                            <option value="landlubber">Landlubber</option>
+                            <option value="scallywag">Scallywag</option>
+                            <option value="hand">Hand</option>
+                            <option value="buccaneer">Buccaneer</option>
+                            <option value="oldsalt">Old Salt</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="rank">*Wha' Be Yer Rank?</label>
+                    </div>
+                    <div>
+                        <select id="dropdown" name="rank">
+                            <option disabled value>Pick Yer Rank, Lad</option>
+                            <option value="cabinboy">Cabin Boy</option>
+                            <option value="cook">Cook</option>
+                            <option value="seaartist">Sea Artist</option>
+                            <option value="carpenter">Carpenter</option>
+                            <option value="striker">Striker</option>
+                            <option value="surgeon">Surgeon</option>
+                            <option value="rigger">Rigger</option>
+                            <option value="powdermonkey">Powdermonkey</option>
+                            <option value ="boatswain">Boatswain</option>
+                            <option value="pilot">Pilot</option>
+                            <option value="gunner">Gunner</option>
+                            <option value="master">Master</option>
+                            <option value="firstmate">First Mate</option>
+                            <option value="quartermaster">Quartermaster</option>
+                            <option value="captain">Captain</option>
+                            <option value="viking">Viking</option>
+                            <option value="alien">Alien</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="shiptype">Wha' Be Th' Type O' Yer Vessel</label>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><label>Barkadeer<input name="shiptype" value="1" type="radio"></label></li>
+                            <li><label>Bark<input name="shiptype" value="2" type="radio"></label></li>
+                            <li><label>Brig<input name="shiptype" value="3" type="radio"></label></li>
+                            <li><label>Clipper<input name="shiptype" value="3" type="radio"></label></li>
+                            <li><label>Cog<input name="shiptype" value ="4" type="radio"></label></li>
+                            <li><label>Galleon<input name="shiptype" value="5" type="radio"></label></li>
+                            <li><label>Galley<input name="shiptype" value="6" type="radio"></label></li>
+                            <li><lable>Hulk<input name="shiptype" value ="7" type="radio"></lable></li>
+                            <li><label></label></li>
+                        </ul>
+                    </div>
+                </div>
             </form>
         </div>
     </main>
