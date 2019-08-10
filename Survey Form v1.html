@@ -138,9 +138,10 @@
     <main>
         <h1>Scurvy Form</h1>
         <div class="form-outline">
+        <div>
             <p>Avast ye, some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
                 Fill out ye form 'n hand o'er ye information so that we may defeat this bilge-sucklin' scourge that be 
-                threatenin' t' sink every last one o' us ole salt. Do nah be a scurvy dog, lest ye walk th' plank t' become
+                threatenin' t' sink every last one o' us. Do nah be a scurvy dog, lest ye walk th' plank t' become
                 taint'd shark bait!</p>
         </div>
         <div>
@@ -166,7 +167,7 @@
                         <label id="years-label" for="years">*Yer Years </label>
                     </div>
                     <div>
-                        <input id="years" autofocus type="text" name="years" min="1" max ="115" placeholder="Scribe Yer Years" required>
+                        <input id="number" autofocus type="text" name="years" min="1" max ="115" placeholder="Scribe Yer Years" required>
                     </div>
                 </div>
                 <div>
@@ -207,7 +208,7 @@
                             <option value="quartermaster">Quartermaster</option>
                             <option value="captain">Captain</option>
                             <option value="viking">Viking</option>
-                            <option value="alien">Alien</option>
+                            <option value="spacepirate">Space Pirate</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -217,19 +218,65 @@
                         <label for="shiptype">Wha' Be Th' Type O' Yer Vessel</label>
                     </div>
                     <div>
-                        <ul>
-                            <li><label>Barkadeer<input name="shiptype" value="1" type="radio"></label></li>
-                            <li><label>Bark<input name="shiptype" value="2" type="radio"></label></li>
-                            <li><label>Brig<input name="shiptype" value="3" type="radio"></label></li>
-                            <li><label>Clipper<input name="shiptype" value="3" type="radio"></label></li>
-                            <li><label>Cog<input name="shiptype" value ="4" type="radio"></label></li>
-                            <li><label>Galleon<input name="shiptype" value="5" type="radio"></label></li>
-                            <li><label>Galley<input name="shiptype" value="6" type="radio"></label></li>
-                            <li><lable>Hulk<input name="shiptype" value ="7" type="radio"></lable></li>
-                            <li><label></label></li>
+                        <select>
+                            <option disabled value>What's Yer Ship?</option>
+                            <option value="sloop">Sloop</option>
+                            <option value="schooner">Schooner</option>
+                            <option value="brig">Brig</option>
+                            <otpion value="squarerig">Square-Rig</otpion>
+                            <option value="dutchfleut">Dutch Fleut</option>
+                            <option value="galleon">Galleon</option>
+                            <option value="galley">Galley</option>
+                            <option value="longboat">Longboat</option>
+                            <option value="spaceship">Spaceship</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                <div>
+                    <label for="seatime">How long 'ave ye been at sea?</label>
+                </div>
+                <div>
+                    <ul style="list-style: none;">
+                        <li><label>Jus' Set Sail<input name="radio-buttons" value="1" type="radio"></label></li>
+                        <li><label>Got Th' Sea Legs<input name="radio-buttons" value="2" type="radio"></label></li>
+                        <li><label>Forgotten Wha' Land Looks Like<input name="radio-buttons" value="3" type="radio"></label></li>
+                        <li><label>Forgotten Wha' A Lass Looks Like<input name="radio-buttons" value="4" type="radio"></label></li>
+                        <li><label>Arrrrrggggghhhhhh<input name="radio-buttons" value="5" type="radio"></label></li>
+                    </ul>
+                </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="illness">Wha' Be Yer Illness</label>
+                    </div>
+                    <div>
+                        <select>
+                            <option value disabled>Choose Yer Plague</option>
+                            <option value="scurvy">Scurvy</option>
+                            <option value="spacescurvy">Space Scurvy</options>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="symptoms">Wha' Be Yer' Symptoms Bucko</label>
+                    </div>
+                    <div>
+                        <ul style="list-style: none;">
+                            <li><label><input name="symptom" value="1" type="checkbox">Fever</label></li>
+                            <li><label><input name="symptom" value="2" type="checkbox">Fatigue</label></li>
+                            <li><label><input name="symptom" value="1" type="checkbox">Blood In Th' Gums</label></li>
+                            <li><label><input name="symptom" value="2" type="checkbox">Me Teeth Are Fallin' Out</label></li>
+                            <li><label><input name="symptom" value="3" type="checkbox">Bulgin' Eyes</label></li>
+                            <li><label><input name="symptom" value="4" type="checkbox">Blacken'd Skin</label></li>
+                            <li><label><input name="symptom" value="5" type="checkbox">Baldness</label></li>
                         </ul>
                     </div>
                 </div>
+
+
+            </div> 
             </form>
         </div>
     </main>
