@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Survey Form</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
         <style>
         html {
             background-color: #293462;
             font-size: 16px;
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
         }
         
         body {
@@ -139,12 +141,11 @@
         <h1>Scurvy Form</h1>
         <div class="form-outline">
         <div>
-            <p>Avast ye, some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
+            <p>Ahoy, me hearties! Some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
                 Fill out ye form 'n hand o'er ye information so that we may defeat this bilge-sucklin' scourge that be 
                 threatenin' t' sink every last one o' us. Do nah be a scurvy dog, lest ye walk th' plank t' become
                 taint'd shark bait!</p>
         </div>
-        <div>
             <form id="survey-form">
                 <div> 
                     <div>
@@ -271,14 +272,30 @@
                             <li><label><input name="symptom" value="3" type="checkbox">Bulgin' Eyes</label></li>
                             <li><label><input name="symptom" value="4" type="checkbox">Blacken'd Skin</label></li>
                             <li><label><input name="symptom" value="5" type="checkbox">Baldness</label></li>
+                            <li><label><input name="symptom" value="6" type="checkbox">Death</label></li>
                         </ul>
                     </div>
                 </div>
-
-
-            </div> 
+                <div>
+                    <div>
+                        <label for="comments">Avast ye! If ye 'ave any more symptoms that are nah on this list then 
+                            place it in th' chest below. Savvy?</label>
+                    </div>
+                    <div>
+                        <textarea name="comment" placeholder="Tell us o' any more afflictions, if ye 'ave them."></textarea> 
+                    </div>
+                </div>
+                <button id="submit" type="submit">Submit</button>
             </form>
-        </div>
+        </div> 
+    <footer>
+        <div>
+            <p>&copy;Arrr.com does nah discriminate in employment based on yer creed, yer color, yer religion, yer sex (includin' bein' wit' sprout, 
+            gender identity or space androdgenism), yer nation o' birth, yer government affiliation, whether ye like scallywags, wenches, 
+            neither or dogs, yer marital status, yer disability (peg-legs do nah count), yer years, yer status as a elder, yer military service, 
+            or any other negative factor. We do discriminate wit' a heavy hand against any kind o' hornswaggle, looters, marooners, scourge 'n th' British.</p>
+            <p>&copy;Arrr.com, 2019, created by <a href="https://github.com/rhelli">Rhelli</a></p>
+         </div>
     </main>
 </body>
 </html>
