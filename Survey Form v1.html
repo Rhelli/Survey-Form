@@ -8,7 +8,7 @@
         
         html {
             background-color: #293462;
-            font-size: 20px;
+            font-size: 18px;
             color: #fce2ae;
             text-align: center;
             font-family: 'Raleway', Helvetica, sans-serif;
@@ -24,6 +24,16 @@
             font-weight: 500;
             font-family: 'Montserrat', Helvetica, sans-serif;
             color: #f7be16;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        hr {
+            border-color: #293462;
+            border-style: dotted;
+            width: 100%;
         }
 
         
@@ -136,34 +146,41 @@
             background-color: #216583;
             margin: 0 auto;
             border-radius: 4px;
-            width: 80%;
-            max-width: 1600px;
-            height: 1500px;
+            width: 65%;
+            height: auto;
             padding: 10px;
             padding-top: 20px;
+            z-index: 5;
+        }
+
+        /* Description Text */
+        .desc-text {
+            margin: 0 auto;
+            width: 80%
         }
 
         /* Text Input Forms */
         .rightinput {
             display: inline-block;
-            vertical-align: middle;
-            width: 50%;
+            vertical-align: top;
+            width: 48%;
             text-align: left;
         }
 
         /* Input Labels */
         .label {
             display: inline-block;
-            vertical-align: top;
+            vertical-align: text-top;
             text-align: right;
             width: 40%;
+            padding: 0px 16px 10px 16px;
         }
 
         /* Input Fields */
         .input-field {
-            width: 300px;
+            width: 250px;
             height: 30px;
-            border-radius: 3000px;
+            border-radius: 10px;
             font-size: 18px;
             font-family: inherit;
             font-weight: 300;
@@ -174,16 +191,39 @@
         }
 
         /* Radio and Checkboxes */
-        .radio .checkboxes {
-            display: block;
-            position: relative;
-            left: -43px;
-            margin-left: 10px;
+        .radio-buttons, .checkboxes {
+            display: inline-block;
+            text-align: left;
+            vertical-align: center;
+            color: #293462;
         }
+
 
         /* Row Div */
         .row {
             display: block;
+            margin: 10px 0px;
+            
+        }
+
+        /* Row Alt Div */
+        .row-alt {
+            display: block;
+            margin: -30px 0px 0px 0px;
+        }
+
+        /* Suggestions Box */
+        .sug-box {
+            width: 300px;
+            height: 120px;
+            border: none;
+            outline: none;
+            background-color: #293462;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 300;
+            color: white;
+            padding-left: 5px;
         }
 
         </style>
@@ -218,51 +258,59 @@
         <h1 class="title">Scurvy Form</h1>
         <div class="form-outline">
         <div>
-            <p>Ahoy, me hearties! Some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
+            <p class="desc-text">Ahoy, me hearties! Some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
                 Fill out ye form 'n hand o'er ye information so that we may defeat this bilge-sucklin' scourge that be 
                 threatenin' t' sink every last one o' us. Do nah be a scurvy dog, lest ye walk th' plank t' become
                 taint'd shark bait!</p>
         </div>
+        <br>
             <form id="survey-form">
                 <div class="row"> 
                     <div class="label">
-                        <label id="name-label" for="name">*Yer Name</label>
+                        <label id="name-label" for="name">*Yer First Name</label>
                     </div>
                     <div class="rightinput">
-                        <input class="input-field" id="name" autofocus type="text" name="name" placeholder="Scribe Yer Name" required>
+                        <input class="input-field" id="name" autofocus type="text" name="name" placeholder="Scribe Yer First Name" required>
                     </div>
                 </div>
-                <br>
+                <div class="row"> 
+                        <div class="label">
+                            <label id="second-name-label" for="second-name">*Yer Last Name</label>
+                        </div>
+                        <div class="rightinput">
+                            <input class="input-field" id="second-name" autofocus type="text" name="name" placeholder="Scribe Yer Last Name" required>
+                        </div>
+                    </div>
                 <div class="row">
                     <div class="label">
-                        <label id="email-label" for="email">*Yer Electro-Mail<br><sup><sup><sup>(not yer chain-mail)</sup></sup></sup></label>
+                        <label id="email-label" for="email">*Yer Electro-Mail<br><sup><sup><sup><sup>(not yer chain-mail)</sup></sup></sup></sup></label>
                     </div>
                     <div class="rightinput">
-                        <input class="input-field" id="email" autofocus type="text" name="email" placeholder="Scribe Yer Email" required>
+                        <input class="input-field" id="email" autofocus type="email" name="email" placeholder="Scribe Yer Email" required>
                     </div>
                 </div>
-                <br>
-                <div class="row">
+                <div class="row-alt">
                     <div class="label">
                         <label id="years-label" for="years">*Yer Years </label>
                     </div>
                     <div class="rightinput">
-                        <input class="input-field" id="number" autofocus type="text" name="years" min="1" max ="115" placeholder="Scribe Yer Years" required>
+                        <input class="input-field" id="number" autofocus type="date" name="years" min="01-01-1600" max ="30-12-2001" placeholder="Scribe Yer Years" required>
                     </div>
                 </div>
-                <br>
                 <div class="row">
                     <div class="label">
                         <label for="experience">*Wha' Be Yer Level O' Experience?</label>
                     </div>
                     <div class="rightinput">
-                        <select class="input-field" id="dropdown" name="experience">
-                            <option disabled value>Pick Yer Experience Matey</option>
-                            <option value="landlubber">Landlubber</option>
-                            <option value="scallywag">Scallywag</option>
-                            <option value="hand">Hand</option>
-                            <option value="buccaneer">Buccaneer</option>
-                            <option value="oldsalt">Old Salt</option>
+                        <select class="input-field" id="dropdown" name="experience" required>
+                            <option name="experience" disabled value>Pick Yer Experience Matey</option>
+                            <option name="experience" value="landlubber">Landlubber</option>
+                            <option name="experience" value="scallywag">Scallywag</option>
+                            <option name="experience" value="hand">Hand</option>
+                            <option name="experience" value="buccaneer">Buccaneer</option>
+                            <option name="experience" value="oldsalt">Old Salt</option>
+                            <option name="experience" value="norseman">Norseman</option>
+                            <option name="experience" value="spacecowboy">Space Cowboy</option>
                         </select>
                     </div>
                 </div>
@@ -271,7 +319,7 @@
                         <label for="rank">*Wha' Be Yer Rank?</label>
                     </div>
                     <div class="rightinput">
-                        <select class="input-field" id="dropdown" name="rank">
+                        <select class="input-field" id="dropdown" name="rank" required>
                             <option disabled value>Pick Yer Rank, Lad</option>
                             <option value="cabinboy">Cabin Boy</option>
                             <option value="cook">Cook</option>
@@ -299,7 +347,7 @@
                         <label for="shiptype">Wha' Be Th' Type O' Yer Vessel</label>
                     </div>
                     <div class="rightinput">
-                        <select class="input-field radio">
+                        <select class="input-field" required>
                             <option disabled value>What's Yer Ship?</option>
                             <option value="sloop">Sloop</option>
                             <option value="schooner">Schooner</option>
@@ -314,19 +362,27 @@
                     </div>
                 </div>
                 <div class="row">
-                <div class="label">
-                    <label for="seatime">How long 'ave ye been at sea?</label>
+                    <div class="label">
+                        <label for="radio-buttons">How long 'ave ye been at sea?</label>
+                    </div>
+                    <div class="rightinput">
+                        <ul style="list-style: none;">
+                            <li><input class="radio-buttons" name="radio-button" value="1" type="radio"><label>Jus' Set Sail</label></li>
+                            <li><input class="radio-buttons" name="radio-button" value="2" type="radio"><label>Got Me Sea Legs</label></li>
+                            <li><input class="radio-buttons" name="radio-button" value="3" type="radio"><label>Forgotten Wha' Land Looks Like</label></li>
+                            <li><input class="radio-buttons" name="radio-button" value="4" type="radio"><label>Forgotten Wha' A Lass Looks Like</label></li>
+                            <li><input class="radio-buttons" name="radio-button" value="5" type="radio"><label>Arrrrrggggghhhhhh</label></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="rightinput">
-                    <ul class="radio" style="list-style: none;">
-                        <li><label><input name="radio-buttons" value="1" type="radio">Jus' Set Sail</label></li>
-                        <li><label><input name="radio-buttons" value="2" type="radio">Got Th' Sea Legs</label></li>
-                        <li><label><input name="radio-buttons" value="3" type="radio">Forgotten Wha' Land Looks Like</label></li>
-                        <li><label><input name="radio-buttons" value="4" type="radio">Forgotten Wha' A Lass Looks Like</label></li>
-                        <li><label><input name="radio-buttons" value="5" type="radio">Arrrrrggggghhhhhh</label></li>
-                    </ul>
-                </div>
-                </div>
+                <div class="row">
+                        <div class="label">
+                            <label id="hands-label" for="handsnumber">*How Many Hands On Deck?</label>
+                        </div>
+                        <div class="rightinput">
+                            <input class="input-field" id="number" autofocus type="number" name="handsnumber" min="1" max="5000" placeholder="How Many Hands On Deck?" required>
+                        </div>
+                    </div>
                 <div class="row">
                     <div class="label">
                         <label for="illness">Wha' Be Yer Illness?</label>
@@ -339,30 +395,41 @@
                         </select>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="label">
-                        <label for="symptoms">Wha' Be Yer' Symptoms, Bucko?</label>
-                    </div>
+                    <div class="row">
+                        <div class="label">
+                            <label for="symptoms">Wha' Be Yer' Symptoms, Bucko?</label>
+                        </div>
                     <div class="rightinput">
-                        <ul class="checkboxes" style="list-style: none;">
-                            <li><label><input name="symptom" value="1" type="checkbox">Fever</label></li>
-                            <li><label><input name="symptom" value="2" type="checkbox">Fatigue</label></li>
-                            <li><label><input name="symptom" value="1" type="checkbox">Blood In Th' Gums</label></li>
-                            <li><label><input name="symptom" value="2" type="checkbox">Me Teeth Are Fallin' Out</label></li>
-                            <li><label><input name="symptom" value="3" type="checkbox">Bulgin' Eyes</label></li>
-                            <li><label><input name="symptom" value="4" type="checkbox">Blacken'd Skin</label></li>
-                            <li><label><input name="symptom" value="5" type="checkbox">Baldness</label></li>
-                            <li><label><input name="symptom" value="6" type="checkbox">Death</label></li>
+                        <ul style="list-style: none;">
+                            <li><label><input class="checkbox" name="symptom" value="1" type="checkbox">Fever</label></li>
+                            <li><label><input class="checkbox" name="symptom" value="2" type="checkbox">Blood In Th' Gums</label></li>
+                            <li><label><input class="checkbox" name="symptom" value="3" type="checkbox">Fatigue</label></li>
+                            <li><label><input class="checkbox" name="symptom" value="4" type="checkbox">Me Teeth Are Fallin' Out</label></li>
+                            <li><label><input class="checkbox" name="symptom" value="5" type="checkbox">Bulgin' Eyes</label></li>
+                            <li><label><input class="checkbox" name="symptom" value="6" type="checkbox">Blacken'd Skin</label></li>
+                            <li><label><input class="checkbox" name="symptom" value="7" type="checkbox">Baldness</label></li>
+                            <li><label><input class="checkbox" name="symptom" value="8" type="checkbox">Death</label></li>
                         </ul>
                     </div>
                 </div>
                 <div class="row">
-                    <div>
+                    <div class="label">
                         <label for="comments">Avast ye! If ye 'ave any more symptoms that are nah on this list then 
                             place it in th' chest below. Savvy?</label>
                     </div>
-                    <div>
-                        <textarea name="comment" placeholder="Tell us o' any more afflictions, if ye 'ave them."></textarea> 
+                    <div class="rightinput">
+                        <textarea class="sug-box" name="comment" placeholder="Tell us o' any more afflictions, if ye 'ave them."></textarea> 
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <ul style="list-style: none;">
+                            <li><label><input class="checkbox" name="tocs" value="1" type="checkbox" required>Yarr, I accept <a href="#termsofservice">
+                                Th. Terms O' Service</a></label></li>
+                            
+                            <li><label><input class="checkbox" name="tocs" value="2" type="checkbox" required>Narr, I forfeit me <a href="#righttoparley">
+                                Right To Parley</a></label></li>
+                        </ul>
                     </div>
                 </div>
                 <button id="submit" type="submit">Submit</button>
@@ -376,6 +443,7 @@
             or any other negative factor. We do discriminate wit' a heavy hand against any kind o' hornswaggle, looters, marooners, scourge 'n th' British.</p>
             <p>&copy;Arrr.com, 2019, created by <a href="https://github.com/rhelli">Rhelli</a></p>
          </div>
+    </footer>
     </main>
 </body>
 </html>
