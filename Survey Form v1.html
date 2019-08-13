@@ -3,26 +3,58 @@
     <head>
         <meta charset="UTF-8">
         <title>Survey Form</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Raleway:300,400,500,700&display=swap" rel="stylesheet">
         <style>
+        
         html {
             background-color: #293462;
-            font-size: 16px;
+            font-size: 20px;
+            color: #fce2ae;
             text-align: center;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Raleway', Helvetica, sans-serif;
+            line-height: 1.5;
+            letter-spacing: 1.5;
         }
-        
         body {
             margin: 0px;
             padding: 0px;
         }
+        .title {
+            font-size: 50px;
+            font-weight: 500;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            color: #f7be16;
+        }
 
+        
+        /* Links Styling */
+            /* Unvisited */
+            a.link {
+                color: "";
+            }
+            /* Visited */
+            a:visited {
+                color: "";
+            }
+            /* Hover */
+            a:hover {
+                color: "";
+                outline: none;
+            }
+            /* Active */
+            a:active {
+                color: "";
+            }
+
+        
         /* Navbar Container */
         .navbar {
             display: flex;
             position: sticky;
+            height: 60px;
             /* overflow: hidden; */
-            font-family: sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1;
             background-color: "";
             justify-content: space-around;
             align-items: center;
@@ -39,6 +71,7 @@
                     /* float: center; */
                     font-size: 1.3em;
                     color: #f7be16;
+                    outline: none;
                     text-align: center;
                     padding: 14px 16px;
                     text-decoration: none;
@@ -64,14 +97,14 @@
 
                 /* Navbar Links Hover Color */
                 .navbar a:hover, .dropdown:hover .dropbutton {
-                    background-color: red;
+                    color: #eb7070;
                 }
 
                 /* Dropdown Content */
                 .dropdown-content {
                     display: none;
                     position: absolute;
-                    background-color: "";
+                    background-color: #216583;
                     min-width: 160px;
                     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                     z-index: 1;
@@ -99,14 +132,58 @@
         
 
         /* Form Outline */
-        .form-outline {
+        .form-outline #survey-form {
             background-color: #216583;
             margin: 0 auto;
             border-radius: 4px;
             width: 80%;
             max-width: 1600px;
+            height: 1500px;
             padding: 10px;
             padding-top: 20px;
+        }
+
+        /* Text Input Forms */
+        .rightinput {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+            text-align: left;
+        }
+
+        /* Input Labels */
+        .label {
+            display: inline-block;
+            vertical-align: top;
+            text-align: right;
+            width: 40%;
+        }
+
+        /* Input Fields */
+        .input-field {
+            width: 300px;
+            height: 30px;
+            border-radius: 3000px;
+            font-size: 18px;
+            font-family: inherit;
+            font-weight: 300;
+            background-color: #293462;
+            color: white;
+            padding-left: 15px;
+            border: #216583;
+        }
+
+        /* Radio and Checkboxes */
+        .radio .checkboxes {
+            display: block;
+            position: relative;
+            left: -43px;
+            margin-left: 10px;
+        }
+
+        /* Row Div */
+        .row {
+            display: block;
         }
 
         </style>
@@ -114,7 +191,7 @@
 <body>
     <header>
         <nav class="navbar">
-        <a href="#Home"><img class="nav-logo" src="/Arrrlogo.png"></a>
+        <a href="#Home"><img class="nav-logo" src="/Arrrlogo.png" alt="Arrr.com Logo"></a>
         <a href="#News">News</a>
         <a href="#Events">Events</a>
         <div class="dropdown">
@@ -138,7 +215,7 @@
     </nav>
     </header>
     <main>
-        <h1>Scurvy Form</h1>
+        <h1 class="title">Scurvy Form</h1>
         <div class="form-outline">
         <div>
             <p>Ahoy, me hearties! Some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
@@ -147,36 +224,39 @@
                 taint'd shark bait!</p>
         </div>
             <form id="survey-form">
-                <div> 
-                    <div>
+                <div class="row"> 
+                    <div class="label">
                         <label id="name-label" for="name">*Yer Name</label>
                     </div>
-                    <div>
-                        <input id="name" autofocus type="text" name="name" placeholder="Scribe Yer Name" required>
+                    <div class="rightinput">
+                        <input class="input-field" id="name" autofocus type="text" name="name" placeholder="Scribe Yer Name" required>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <label id="email-label" for="email">*Yer Email</label>
+                <br>
+                <div class="row">
+                    <div class="label">
+                        <label id="email-label" for="email">*Yer Electro-Mail<br><sup><sup><sup>(not yer chain-mail)</sup></sup></sup></label>
                     </div>
-                    <div>
-                        <input id="email" autofocus type="text" name="email" placeholder="Scribe Yer Email" required>
+                    <div class="rightinput">
+                        <input class="input-field" id="email" autofocus type="text" name="email" placeholder="Scribe Yer Email" required>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <br>
+                <div class="row">
+                    <div class="label">
                         <label id="years-label" for="years">*Yer Years </label>
                     </div>
-                    <div>
-                        <input id="number" autofocus type="text" name="years" min="1" max ="115" placeholder="Scribe Yer Years" required>
+                    <div class="rightinput">
+                        <input class="input-field" id="number" autofocus type="text" name="years" min="1" max ="115" placeholder="Scribe Yer Years" required>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <br>
+                <div class="row">
+                    <div class="label">
                         <label for="experience">*Wha' Be Yer Level O' Experience?</label>
                     </div>
-                    <div>
-                        <select id="dropdown" name="experience">
+                    <div class="rightinput">
+                        <select class="input-field" id="dropdown" name="experience">
                             <option disabled value>Pick Yer Experience Matey</option>
                             <option value="landlubber">Landlubber</option>
                             <option value="scallywag">Scallywag</option>
@@ -186,12 +266,12 @@
                         </select>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div class="row">
+                    <div class="label">
                         <label for="rank">*Wha' Be Yer Rank?</label>
                     </div>
-                    <div>
-                        <select id="dropdown" name="rank">
+                    <div class="rightinput">
+                        <select class="input-field" id="dropdown" name="rank">
                             <option disabled value>Pick Yer Rank, Lad</option>
                             <option value="cabinboy">Cabin Boy</option>
                             <option value="cook">Cook</option>
@@ -201,7 +281,7 @@
                             <option value="surgeon">Surgeon</option>
                             <option value="rigger">Rigger</option>
                             <option value="powdermonkey">Powdermonkey</option>
-                            <option value ="boatswain">Boatswain</option>
+                            <option value="boatswain">Boatswain</option>
                             <option value="pilot">Pilot</option>
                             <option value="gunner">Gunner</option>
                             <option value="master">Master</option>
@@ -214,12 +294,12 @@
                         </select>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div class="row">
+                    <div class="label">
                         <label for="shiptype">Wha' Be Th' Type O' Yer Vessel</label>
                     </div>
-                    <div>
-                        <select>
+                    <div class="rightinput">
+                        <select class="input-field radio">
                             <option disabled value>What's Yer Ship?</option>
                             <option value="sloop">Sloop</option>
                             <option value="schooner">Schooner</option>
@@ -233,38 +313,38 @@
                         </select>
                     </div>
                 </div>
-                <div>
-                <div>
+                <div class="row">
+                <div class="label">
                     <label for="seatime">How long 'ave ye been at sea?</label>
                 </div>
-                <div>
-                    <ul style="list-style: none;">
-                        <li><label>Jus' Set Sail<input name="radio-buttons" value="1" type="radio"></label></li>
-                        <li><label>Got Th' Sea Legs<input name="radio-buttons" value="2" type="radio"></label></li>
-                        <li><label>Forgotten Wha' Land Looks Like<input name="radio-buttons" value="3" type="radio"></label></li>
-                        <li><label>Forgotten Wha' A Lass Looks Like<input name="radio-buttons" value="4" type="radio"></label></li>
-                        <li><label>Arrrrrggggghhhhhh<input name="radio-buttons" value="5" type="radio"></label></li>
+                <div class="rightinput">
+                    <ul class="radio" style="list-style: none;">
+                        <li><label><input name="radio-buttons" value="1" type="radio">Jus' Set Sail</label></li>
+                        <li><label><input name="radio-buttons" value="2" type="radio">Got Th' Sea Legs</label></li>
+                        <li><label><input name="radio-buttons" value="3" type="radio">Forgotten Wha' Land Looks Like</label></li>
+                        <li><label><input name="radio-buttons" value="4" type="radio">Forgotten Wha' A Lass Looks Like</label></li>
+                        <li><label><input name="radio-buttons" value="5" type="radio">Arrrrrggggghhhhhh</label></li>
                     </ul>
                 </div>
                 </div>
-                <div>
-                    <div>
-                        <label for="illness">Wha' Be Yer Illness</label>
+                <div class="row">
+                    <div class="label">
+                        <label for="illness">Wha' Be Yer Illness?</label>
                     </div>
-                    <div>
-                        <select>
+                    <div class="rightinput">
+                        <select class="input-field">
                             <option value disabled>Choose Yer Plague</option>
                             <option value="scurvy">Scurvy</option>
                             <option value="spacescurvy">Space Scurvy</options>
                         </select>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <label for="symptoms">Wha' Be Yer' Symptoms Bucko</label>
+                <div class="row">
+                    <div class="label">
+                        <label for="symptoms">Wha' Be Yer' Symptoms, Bucko?</label>
                     </div>
-                    <div>
-                        <ul style="list-style: none;">
+                    <div class="rightinput">
+                        <ul class="checkboxes" style="list-style: none;">
                             <li><label><input name="symptom" value="1" type="checkbox">Fever</label></li>
                             <li><label><input name="symptom" value="2" type="checkbox">Fatigue</label></li>
                             <li><label><input name="symptom" value="1" type="checkbox">Blood In Th' Gums</label></li>
@@ -276,7 +356,7 @@
                         </ul>
                     </div>
                 </div>
-                <div>
+                <div class="row">
                     <div>
                         <label for="comments">Avast ye! If ye 'ave any more symptoms that are nah on this list then 
                             place it in th' chest below. Savvy?</label>
