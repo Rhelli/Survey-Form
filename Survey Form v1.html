@@ -39,6 +39,7 @@
         li {
             padding: 0px 0px 0px 10px;
         }
+        
 
         
         /* Links Styling */
@@ -118,10 +119,10 @@
                 .dropdown-content {
                     display: none;
                     position: absolute;
-                    background: #293462;
+                    background: rgba(12,12,12,1);
                     min-width: 160px;
                     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
+                    z-index: 10;
                 }
 
                 /* Dropdown Links */
@@ -146,9 +147,10 @@
         
         /* Title Orange Logo */
         .orange {
-            position: relative;
             width: 50px;
             height: auto;
+            cursor: none;
+            pointer-events: none;
         }
 
         /* Form Outline */
@@ -196,10 +198,9 @@
             width: 250px;
             height: 30px;
             border-radius: 10px;
-            cursor: pointer;
             font-size: 18px;
             font-family: inherit;
-            font-weight: 500;
+            font-weight: 300;
             background-color: rgba(38,38,38,1);
             color: rgb(219, 219, 219);
             padding-left: 10px;
@@ -305,14 +306,14 @@
             <a href="#Hatch Battening">Hatch Battening</a>
             <a href="#Pillaging">Pillaging</a>
             <a href="#Hands Fo' Hirin'">Hands Fo' Hirin'</a>
-            <a href="#Flags">Flags</a>
+            <a href="#Scurvy Sortin">Flags</a>
         </div>
         </div>
         <a href="#Careers">Careers</a>
     </nav>
     </header>
     <main>
-        <h1 class="title">Scurvy Form <img class="orange" src="/orange.png" alt="Logo"></h1>
+        <h1 class="title">Scurvy Form <img class="orange" src="/orange.png" disabled alt="Logo"></h1>
         <div class="form-outline">
         <div>
             <p class="desc-text">Ahoy, me hearties! Some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
@@ -360,7 +361,7 @@
                     </div>
                     <div class="rightinput">
                         <select class="input-field" id="dropdown" name="experience" required>
-                            <option name="experience" disabled value>Pick Yer Experience Matey</option>
+                            <option name="experience" selected disabled value>- - -</option>
                             <option name="experience" value="landlubber">Landlubber</option>
                             <option name="experience" value="scallywag">Scallywag</option>
                             <option name="experience" value="hand">Hand</option>
@@ -377,25 +378,25 @@
                     </div>
                     <div class="rightinput">
                         <select class="input-field" id="dropdown" name="rank" required>
-                            <option disabled value>Pick Yer Rank, Lad</option>
-                            <option value="cabinboy">Cabin Boy</option>
-                            <option value="cook">Cook</option>
-                            <option value="seaartist">Sea Artist</option>
-                            <option value="carpenter">Carpenter</option>
-                            <option value="striker">Striker</option>
-                            <option value="surgeon">Surgeon</option>
-                            <option value="rigger">Rigger</option>
-                            <option value="powdermonkey">Powdermonkey</option>
-                            <option value="boatswain">Boatswain</option>
-                            <option value="pilot">Pilot</option>
-                            <option value="gunner">Gunner</option>
-                            <option value="master">Master</option>
-                            <option value="firstmate">First Mate</option>
-                            <option value="quartermaster">Quartermaster</option>
-                            <option value="captain">Captain</option>
-                            <option value="viking">Viking</option>
-                            <option value="spacepirate">Space Pirate</option>
-                            <option value="other">Other</option>
+                            <option name="rank" selected disabled value>- - -</option>
+                            <option name="rank" value="cabinboy">Cabin Boy</option>
+                            <option name="rank" value="cook">Cook</option>
+                            <option name="rank" value="seaartist">Sea Artist</option>
+                            <option name="rank" value="carpenter">Carpenter</option>
+                            <option name="rank" value="striker">Striker</option>
+                            <option name="rank" value="surgeon">Surgeon</option>
+                            <option name="rank" value="rigger">Rigger</option>
+                            <option name="rank" value="powdermonkey">Powdermonkey</option>
+                            <option name="rank" value="boatswain">Boatswain</option>
+                            <option name="rank" value="pilot">Pilot</option>
+                            <option name="rank" value="gunner">Gunner</option>
+                            <option name="rank" value="master">Master</option>
+                            <option name="rank" value="firstmate">First Mate</option>
+                            <option name="rank" value="quartermaster">Quartermaster</option>
+                            <option name="rank" value="captain">Captain</option>
+                            <option name="rank" value="viking">Viking</option>
+                            <option name="rank" value="spacepirate">Space Pirate</option>
+                            <option name="rank" value="other">Other</option>
                         </select>
                     </div>
                 </div>
@@ -405,7 +406,7 @@
                     </div>
                     <div class="rightinput">
                         <select class="input-field" required>
-                            <option disabled value>What's Yer Ship?</option>
+                            <option disabled selected value>- - -</option>
                             <option value="sloop">Sloop</option>
                             <option value="schooner">Schooner</option>
                             <option value="brig">Brig</option>
@@ -446,7 +447,7 @@
                     </div>
                     <div class="rightinput">
                         <select class="input-field">
-                            <option value disabled>Choose Yer Plague</option>
+                            <option value selected disabled>- - -</option>
                             <option value="scurvy">Scurvy</option>
                             <option value="spacescurvy">Space Scurvy</options>
                         </select>
