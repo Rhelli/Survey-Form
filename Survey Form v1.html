@@ -7,11 +7,8 @@
         <style>
         
         html {
-            background: #0F2027;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+            background: rgb(12,12,12);
+            background: linear-gradient(90deg, rgba(12,12,12,1) 0%, rgba(38,38,38,1) 50%, rgba(12,12,12,1) 100%);
 
             font-size: 18px;
             color: #f7be16;
@@ -147,14 +144,22 @@
                     display: block;
                 }
         
+        /* Title Orange Logo */
+        .orange {
+            position: relative;
+            width: 50px;
+            height: auto;
+        }
 
         /* Form Outline */
         .form-outline #survey-form {
-            background-color: #f3b752;
-            background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+            /* background-color: #f3b752; */
+            /* background-image: url("https://www.transparenttextures.com/patterns/black-paper.png"); */
+            background-image: url("https://i.pinimg.com/originals/47/b5/67/47b567ff37393b5c564cbe1186e90662.jpg");
+            background-size: 100%;
             color: black;
             margin: 0 auto;
-            border-radius: 4px;
+            border-radius: 8px;
             width: 65%;
             height: auto;
             padding: 10px;
@@ -195,7 +200,7 @@
             font-size: 18px;
             font-family: inherit;
             font-weight: 500;
-            background-color: #293462;
+            background-color: rgba(38,38,38,1);
             color: rgb(219, 219, 219);
             padding-left: 10px;
             border: #216583;
@@ -235,7 +240,7 @@
             height: 120px;
             border: none;
             outline: none;
-            background-color: #293462;
+            background-color: rgba(38,38,38,1);
             border-radius: 5px;
             font-size: 18px;
             font-weight: 300;
@@ -307,7 +312,7 @@
     </nav>
     </header>
     <main>
-        <h1 class="title">Scurvy Form</h1>
+        <h1 class="title">Scurvy Form <img class="orange" src="/orange.png" alt="Logo"></h1>
         <div class="form-outline">
         <div>
             <p class="desc-text">Ahoy, me hearties! Some o' ye 'ave been complainin' that a plight o' scurvy has been washin' around th' deck. 
