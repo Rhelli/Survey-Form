@@ -16,8 +16,8 @@ Also includes:
 
 _____________________________________________________________________________
   
- 
-Post Dev SWOT
+    Post Dev SWOT
+    
     Strenghts
       - Navbar and the navbar :hover element, will be using that again.
       - 3D submit button - In lieu of using actual @animations and @keyframes, it provides a very simple, pure CSS solution to         a more interactive 'submit' button
