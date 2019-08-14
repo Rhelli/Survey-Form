@@ -7,9 +7,14 @@
         <style>
         
         html {
-            background-color: #293462;
+            background: #0F2027;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
             font-size: 18px;
-            color: #fce2ae;
+            color: #f7be16;
             text-align: center;
             font-family: 'Raleway', Helvetica, sans-serif;
             line-height: 1.5;
@@ -24,32 +29,34 @@
             font-weight: 500;
             font-family: 'Montserrat', Helvetica, sans-serif;
             color: #f7be16;
+            text-shadow: 2px 2px 1px rgba(186,141,6, 0.4);
         }
         ul {
             margin: 0;
             padding: 0;
         }
-
-        hr {
-            border-color: #293462;
-            border-style: dotted;
-            width: 100%;
+        footer {
+            font-size: 12px;
+            padding: 14px 16px;
+        }
+        li {
+            padding: 0px 0px 0px 10px;
         }
 
         
         /* Links Styling */
             /* Unvisited */
             a.link {
-                color: "";
+                color: #164ff7;
             }
             /* Visited */
             a:visited {
-                color: "";
+                color: #737373;
+                font-weight: 700;
             }
             /* Hover */
             a:hover {
-                color: "";
-                outline: none;
+                color: #eb7070;
             }
             /* Active */
             a:active {
@@ -61,8 +68,7 @@
         .navbar {
             display: flex;
             position: sticky;
-            height: 60px;
-            /* overflow: hidden; */
+            height: 65px;
             font-family: 'Montserrat', sans-serif;
             line-height: 1;
             background-color: "";
@@ -108,13 +114,14 @@
                 /* Navbar Links Hover Color */
                 .navbar a:hover, .dropdown:hover .dropbutton {
                     color: #eb7070;
+                    border-top: 3px solid #eb7070;
                 }
 
                 /* Dropdown Content */
                 .dropdown-content {
                     display: none;
                     position: absolute;
-                    background-color: #216583;
+                    background: #293462;
                     min-width: 160px;
                     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                     z-index: 1;
@@ -132,7 +139,7 @@
 
                 /* Dropdown Links Color */
                 .dropdown-content a:hover {
-                    background-color: #00818a;
+                    background-color: #444072;
                 }
 
                 /* Show Dropdown Menu on Hover */
@@ -143,7 +150,9 @@
 
         /* Form Outline */
         .form-outline #survey-form {
-            background-color: #216583;
+            background-color: #f3b752;
+            background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+            color: black;
             margin: 0 auto;
             border-radius: 4px;
             width: 65%;
@@ -172,6 +181,7 @@
             display: inline-block;
             vertical-align: text-top;
             text-align: right;
+            font-weight: 500;
             width: 40%;
             padding: 0px 16px 10px 16px;
         }
@@ -181,12 +191,13 @@
             width: 250px;
             height: 30px;
             border-radius: 10px;
+            cursor: pointer;
             font-size: 18px;
             font-family: inherit;
-            font-weight: 300;
+            font-weight: 500;
             background-color: #293462;
-            color: white;
-            padding-left: 15px;
+            color: rgb(219, 219, 219);
+            padding-left: 10px;
             border: #216583;
         }
 
@@ -196,6 +207,7 @@
             text-align: left;
             vertical-align: center;
             color: #293462;
+            cursor: pointer;
         }
 
 
@@ -212,6 +224,11 @@
             margin: -30px 0px 0px 0px;
         }
 
+        /* T&C Checkboxes */
+        .tocs {
+            padding: 15px 20px;
+        }
+
         /* Suggestions Box */
         .sug-box {
             width: 300px;
@@ -224,8 +241,43 @@
             font-weight: 300;
             color: white;
             padding-left: 5px;
+            padding-left: 8px;
+            padding-top: 5px;
         }
 
+        /* Submit Button */
+        .submit {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            margin: 30px auto 50px auto;
+            border-radius: 4px;
+            background: linear-gradient(180deg, rgba(163,0,0,1) 48%, rgba(130,0,0,1) 100%);
+            color: transparent;
+            text-shadow: 2px 1px 1px #300000;
+            box-shadow: 1px 5px 0px 2px #610000;
+            border: 3px solid #920000;
+        }
+        .submit:hover {
+            /* background-color: #ac1919; */
+            background: linear-gradient(180deg, #ac1919 48%, rgba(163,0,0,1) 100%);
+            box-shadow: 1px 5px 0px 2px #720000;
+        }
+        .submit:active {
+            background: linear-gradient(180deg, rgba(163,0,0,1) 48%, rgba(130,0,0,1) 100%);
+            color: transparent;
+            text-shadow: 2px 1px 1px #300000;
+            box-shadow: 1px 3px 0px 1px #610000;
+            border: 3px solid #920000; 
+            transform: translateY(4px);
+        }
+        .submit:focus {
+            outline: none;
+        }
+        
         </style>
     </head>
 <body>
@@ -401,14 +453,14 @@
                         </div>
                     <div class="rightinput">
                         <ul style="list-style: none;">
-                            <li><label><input class="checkbox" name="symptom" value="1" type="checkbox">Fever</label></li>
-                            <li><label><input class="checkbox" name="symptom" value="2" type="checkbox">Blood In Th' Gums</label></li>
-                            <li><label><input class="checkbox" name="symptom" value="3" type="checkbox">Fatigue</label></li>
-                            <li><label><input class="checkbox" name="symptom" value="4" type="checkbox">Me Teeth Are Fallin' Out</label></li>
-                            <li><label><input class="checkbox" name="symptom" value="5" type="checkbox">Bulgin' Eyes</label></li>
-                            <li><label><input class="checkbox" name="symptom" value="6" type="checkbox">Blacken'd Skin</label></li>
-                            <li><label><input class="checkbox" name="symptom" value="7" type="checkbox">Baldness</label></li>
-                            <li><label><input class="checkbox" name="symptom" value="8" type="checkbox">Death</label></li>
+                            <li><label><input class="checkboxes" name="symptom" value="1" type="checkbox">Fever</label></li>
+                            <li><label><input class="checkboxes" name="symptom" value="2" type="checkbox">Blood In Th' Gums</label></li>
+                            <li><label><input class="checkboxes" name="symptom" value="3" type="checkbox">Fatigue</label></li>
+                            <li><label><input class="checkboxes" name="symptom" value="4" type="checkbox">Me Teeth Are Fallin' Out</label></li>
+                            <li><label><input class="checkboxes" name="symptom" value="5" type="checkbox">Bulgin' Eyes</label></li>
+                            <li><label><input class="checkboxes" name="symptom" value="6" type="checkbox">Blacken'd Skin</label></li>
+                            <li><label><input class="checkboxes" name="symptom" value="7" type="checkbox">Baldness</label></li>
+                            <li><label><input class="checkboxes" name="symptom" value="8" type="checkbox">Death</label></li>
                         </ul>
                     </div>
                 </div>
@@ -422,17 +474,17 @@
                     </div>
                 </div>
                 <div>
-                    <div class="row">
+                    <div class="tocs">
                         <ul style="list-style: none;">
                             <li><label><input class="checkbox" name="tocs" value="1" type="checkbox" required>Yarr, I accept <a href="#termsofservice">
                                 Th. Terms O' Service</a></label></li>
-                            
+                            <br>
                             <li><label><input class="checkbox" name="tocs" value="2" type="checkbox" required>Narr, I forfeit me <a href="#righttoparley">
                                 Right To Parley</a></label></li>
                         </ul>
                     </div>
                 </div>
-                <button id="submit" type="submit">Submit</button>
+                <button class="submit" id="submit" type="submit">Submit</button>
             </form>
         </div> 
     <footer>
@@ -441,7 +493,7 @@
             gender identity or space androdgenism), yer nation o' birth, yer government affiliation, whether ye like scallywags, wenches, 
             neither or dogs, yer marital status, yer disability (peg-legs do nah count), yer years, yer status as a elder, yer military service, 
             or any other negative factor. We do discriminate wit' a heavy hand against any kind o' hornswaggle, looters, marooners, scourge 'n th' British.</p>
-            <p>&copy;Arrr.com, 2019, created by <a href="https://github.com/rhelli">Rhelli</a></p>
+            <p style="font-size: 16px;">&copy;Arrr.com, 2019, created by <a href="https://github.com/rhelli">Rhelli</a></p>
          </div>
     </footer>
     </main>
